@@ -1433,39 +1433,7 @@
 
 
       <!--Category-->
-      <section class="category">
-        <div class="category-container">
-          <div class="category-list">
-            <div class="category-list-item">
-              <div class="category-headings">
-                <div class="heading">
-                  <span class="category-title">
-                    Men's Item
-                  </span>
-                  <span class="category-title-heading">
-                    The Winter Sale Off 50%
-                  </span>
-                  <a href="#" class="category-btn">Shop Now</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="category-list-item">
-              <div class="category-headings">
-                <div class="heading">
-                  <span class="category-title">
-                    Women's Item
-                  </span>
-                  <span class="category-title-heading">
-                    The Winter Sale Off 50%
-                  </span>
-                  <a href="#" class="category-btn">Shop Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
       <!--End Category Section-->
 
       <!--Product Section-->
