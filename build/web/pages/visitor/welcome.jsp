@@ -1424,68 +1424,7 @@
       <!--End Icons Section-->
 
       <!--Deals Section-->
-      <section class="deal">
-        <div class="deal-container">
-          <div class="deal-heading">
-            <i class="fa-solid fa-bolt deal-icon"></i>
-            <span class="deal-main-title">Flash Deals</span>
-          </div>
-          <div class="deal-item">
-            <div class="deal-items-list">
-              <div class="deal-items-info">
-                <span class="deal-name">
-                  Playstation 4 Game Pro
-                </span>
-                <span class="deal-price">
-                  $500
-                </span>
-                <a href="#" class="deal-btn">Buy Now <i class="fa-solid fa-chevron-right"></i></a>
-              </div>
-              <div class="deal-items-img">
-                <img
-                  src="https://cdn.shopify.com/s/files/1/0328/7066/2275/products/CarbonFibreWhite_084f710f-02d0-48e4-bb93-3f5519358b04_2048x2048.png?v=1612446619"
-                  class="deal-image" alt="">
-              </div>
-            </div>
-
-            <div class="deal-items-list">
-              <div class="deal-items-info">
-                <span class="deal-name">
-                  Long Puffer Winter Coat
-                </span>
-                <span class="deal-price">
-                  $200
-                </span>
-                <a href="#" class="deal-btn">Buy Now <i class="fa-solid fa-chevron-right"></i></a>
-              </div>
-              <div class="deal-items-img">
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-TWZS3tzFnGCTLNLRt7-aqCwIIqTPYUuMfA&s"
-                  class="deal-image" alt="">
-              </div>
-            </div>
-
-            <div class="deal-items-list">
-              <div class="deal-items-info">
-                <span class="deal-name">
-                  Casual Shoes
-                </span>
-                <span class="deal-price">
-                  $100
-                </span>
-                <a href="#" class="deal-btn">Buy Now <i class="fa-solid fa-chevron-right"></i></a>
-              </div>
-              <div class="deal-items-img">
-                <img src="https://freepngimg.com/thumb/categories/627.png" class="deal-image" alt="">
-              </div>
-            </div>
-          </div>
-          <div class="left-right-icon">
-            <i class="fa-solid fa-arrow-left deal-left-icon"></i>
-            <i class="fa-solid fa-arrow-right deal-right-icon"></i>
-          </div>
-        </div>
-      </section>
+      
       <!--End Deal Section-->
 
       <!--Hot Deal Section-->
