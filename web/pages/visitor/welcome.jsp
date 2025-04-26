@@ -1413,7 +1413,7 @@
               neque, harum debitis. Sapiente
               excepturi amet voluptatum tempora hic quam!
             </p>
-            <a href="#" class="action-btn">Shop Now</a>
+            <!--<a href="#" class="action-btn">Shop Now</a>-->
           </div>
         </div>
       </section>
@@ -1517,13 +1517,13 @@
             </div>
           </div>
         </div>
-        <div class="credit">
+<!--        <div class="credit">
           <div class="credit-container">
             <div class="author-name">
               Created By: <a href="www.codebyadnan.com"> <span>Adnan Khan</span></a>
             </div>
           </div>
-        </div>
+        </div>-->
       </section>
       <!--End Footer Section-->
 
