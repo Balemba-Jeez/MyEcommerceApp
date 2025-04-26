@@ -1471,8 +1471,9 @@
 
             <ul class="navbar-list">
 
+
               <li class="navbar-item">
-                <a href="#" class="navbar-link">Home</a>
+                <a href="pages/visitor/welcome.jsp" class="navbar-link">Home</a>
               </li>
 
               <li class="navbar-item">
@@ -1480,7 +1481,7 @@
               </li>
 
               <li class="navbar-item">
-                <a href="#" class="navbar-link">Products</a>
+                <a href="pages/client/home.jsp" class="navbar-link">Products</a>
               </li>
 
               <li class="navbar-item">
@@ -1526,7 +1527,7 @@
               </li>
 
               <li>
-                <button class="nav-action-btn">
+                <button class="nav-action-btn" onclick="window.location.href='pages/client/cart.jsp'">
                   <ion-icon name="bag-outline" aria-hidden="true"></ion-icon>
 
                   <data class="nav-action-text" value="318.00">Basket: <strong>$318.00</strong></data>
@@ -1720,7 +1721,7 @@
 
               let boxLink = document.createElement("a");
               // boxLink.href = '#'
-              boxLink.href = "pages/client/productDetails.jsp?id=" + ob.id;
+              boxLink.href = "/MyEcommerceApp/pages/client/productDetails.jsp?id=" + ob.id;
               // console.log('link=>' + boxLink);
 
               let imgTag = document.createElement("img");

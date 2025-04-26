@@ -1084,8 +1084,9 @@
 
             <ul class="navbar-list">
 
+
               <li class="navbar-item">
-                <a href="#" class="navbar-link">Home</a>
+                <a href="/MyEcommerceApp/pages/visitor/welcome.jsp" class="navbar-link">Home</a>
               </li>
 
               <li class="navbar-item">
@@ -1093,7 +1094,7 @@
               </li>
 
               <li class="navbar-item">
-                <a href="#" class="navbar-link">Products</a>
+                <a href="/MyEcommerceApp/pages/client/home.jsp" class="navbar-link">Products</a>
               </li>
 
               <li class="navbar-item">
@@ -1121,7 +1122,7 @@
               </li>
 
               <li>
-                <a href="pages/visitor/register.jsp" class="nav-action-btn">
+                <a href="/MyEcommerceApp/pages/visitor/register.jsp" class="nav-action-btn">
                   <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
 
                   <span class="nav-action-text">Login / Register</span>
@@ -1139,7 +1140,7 @@
               </li>
 
               <li>
-                <button class="nav-action-btn">
+                <button class="nav-action-btn" onclick="window.location.href='/MyEcommerceApp/pages/client/cart.jsp'">
                   <ion-icon name="bag-outline" aria-hidden="true"></ion-icon>
 
                   <data class="nav-action-text" value="318.00">Basket: <strong>$318.00</strong></data>
