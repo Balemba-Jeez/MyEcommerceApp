@@ -18,8 +18,8 @@ import jakarta.servlet.RequestDispatcher;
  *
  * @author acer
  */
-@WebServlet(name = "HomeServlet", urlPatterns = {"/"})
-public class HomeServlet extends HttpServlet {
+@WebServlet(name = "WelcomeServlet", urlPatterns = {"/"})
+public class WelcomeServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>

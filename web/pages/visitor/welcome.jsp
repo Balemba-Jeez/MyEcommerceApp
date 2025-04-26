@@ -1363,7 +1363,7 @@
               </li>
 
               <li>
-                <a href="#" class="nav-action-btn">
+                <a href="pages/visitor/register.jsp" class="nav-action-btn">
                   <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
 
                   <span class="nav-action-text">Login / Register</span>
@@ -1401,17 +1401,16 @@
         <div class="hero-container">
           <div class="hero-title">
             <span class="hero-heading">
-              Big Offer 50% off
+              Welcome to Shopping –
             </span>
             <h1 class="hero-main-title">
-              New Collection
+               Your One-Stop Online Store!
             </h1>
             <p class="hero-sub-heading">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Nulla, temporibus beatae nisi,
-              modi id esse placeat sit sint quod nihil
-              neque, harum debitis. Sapiente
-              excepturi amet voluptatum tempora hic quam!
+              Find everything you need in one place.
+              From fashion to gadgets,
+              we bring the store to your door —
+              easy, fast, and reliable.
             </p>
             <!--<a href="#" class="action-btn">Shop Now</a>-->
           </div>

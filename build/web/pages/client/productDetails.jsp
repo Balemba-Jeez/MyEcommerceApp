@@ -21,6 +21,7 @@
   -->
       <!--<link rel="stylesheet" type="text/css" href="{pageContext.request.contextPath}/assets/css/style.css">-->
       <!--<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/css/responsive.css">-->
+      <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 
       <!-- 
     - google font link
@@ -41,145 +42,200 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
       
-      <!--Content css  -->
+      <!--contentDetail css  -->
       
       <style>
           body
-        {
-            margin: 0;
-            font-family: 'Lato', sans-serif;
-        }
-        h1
-        {
-            width: 90%;
-            margin: auto;
-            padding: 50px 0;
-            letter-spacing: 2px;
-            font-weight: 700;
-            text-transform: capitalize;
-        }
-        #containerClothing, #containerAccessories
-        {
-            display: grid;
-            grid-gap: 70px 20px;
-            grid-template-columns: repeat(5, 1fr);
-            width: 90%;
-            margin: auto;
-            padding-bottom: 40px;
-        }
-        #box 
-        {
-            width: 100%;
-            background-color: white;
-            align-content: center;
-            border-radius: 10px;
-            box-shadow: 1px 2px 6px 2px rgb(219, 219, 219);
-        }
-        #box:hover
-        {
-            box-shadow: 1px 6px 3px 0 rgb(185, 185, 185);
-        }
-        #containerClothing img
-        {
-            width: 100%;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-        }
-        #containerAccessories img
-        {
-            width: 100%;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-        }
-        #details
-        {
-            padding: 0 15px;
-            text-transform: capitalize;
-        }
-        #box a 
-        {
-            text-decoration: none;
-            color: rgb(29, 29, 29);
-        }
-        h3
-        {
-            font-size: 16px;
-        }
-        h4
-        {
-            font-weight: 100;
-        }
-        h2
-        {
-            color: rgb(3, 94, 94);
-        }
+            {
+                margin: 0;
+                text-transform: capitalize;
+                font-family: 'Lato', sans-serif;
+                font-weight: 100;
+                
+            }
 
-        /* ----------------------------- MEDIA QUERY --------------------------- */
-
-        @media(max-width: 1070px)
-        {
-            h1
+            #containerProduct
             {
-                font-size: 25px;
+                padding-top: 80px;
             }
-            #containerClothing, #containerAccessories
+            #containerD
             {
-                width: 95%;
-                grid-gap: 10px;
-            }
-        }
-        @media(max-width: 850px)
-        {
-            h1 
-            {
-                width: 80%;
-            }
-            #containerClothing, #containerAccessories
-            {
+                width: 90%;
+                margin: auto;
                 display: grid;
-                grid-gap: 70px 20px;
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: 1fr 2fr;
+                padding: 80px 40px;
+            }
+            #imageSection
+            {
                 width: 80%;
-            }    
-        }
-        @media(max-width: 650px)
-        {
+                /*margin: auto;*/
+                margin-top: 5px;
+            }
+            #imageSection img
+            {
+                width: 100%;
+                float: right;
+                border-radius: 10px;
+                box-shadow: 1px 2px 6px 2px rgb(219, 219, 219);
+            }
+            #imageSection img:hover
+            {
+                box-shadow: 1px 0px 9px 1px rgb(3, 122, 122);
+
+            }
+
+            #productDetails
+            {
+                width: 100%;
+            }
             h1
             {
+                font-size: 35px;
+                letter-spacing: 1px;
+                word-spacing: 2px;
+            }
+            h4
+            {
+                font-size: 15px;
+                font-weight: bold;
+                color: rgb(3, 122, 122);
+                letter-spacing: 1px;
+                word-spacing: 2px;
+            }
+            #productPreview
+            {
+                padding-bottom: 10px;
+            }
+            #productPreview > img
+            {
+                width: 50px;
+                padding: 10px 10px;
+                border-radius: 15px;
+                cursor: pointer;
+                display: inline;
+            }
+            p
+            {
+                font-size: 15px;
+                word-spacing: 2px;
+                letter-spacing: 1px;
+                line-height: 25px;
+            }
+            #button button
+            {
+                padding: 10px 15px;
+                color: white;
+                background-color: rgb(3, 122, 122);
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
                 font-size: 20px;
             }
-            h1 
+            #button button a
             {
-                width: 90%;
+                text-decoration: none;
+                font-size: 18px;
             }
-            #containerClothing, #containerAccessories
+            #button button:hover
             {
-                width: 90%;
+                background-color: rgb(3, 94, 94);
             }
-        }
-        @media(max-width: 600px)
-        {
-            h1 
+            #button button a:focus
             {
-                width: 70%;
+                outline: none;
             }
-            #containerClothing, #containerAccessories
+
+            /* ----------------------------- MEDIA QUERY --------------------------- */
+
+            @media(max-width: 1300px)
             {
-                width: 70%;
+                h1
+                {
+                    font-size: 28px;
+                }
+                #productPreview > img
+                {
+                    width: 40px;
+                    padding: 10px 10px;
+                    padding-bottom: 30px;
+                }
+                button
+                {
+                    padding: 8px 13px;
+                    background-color: rgb(3, 122, 122);
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
             }
-        }
-        @media(max-width: 505px)
-        {
-            h1 
+
+            @media(max-width: 1170px)
             {
-                width: 80%;
+                h1
+                {
+                    font-size: 22px;
+                }
+                #productPreview > img
+                {
+                    width: 40px;
+                    padding: 10px 10px;
+                    padding-bottom: 30px;
+                }
+                button a
+                {
+                    font-size: 15px;
+
+                }
+                h4, p
+                {
+                    font-size: 13px;
+                }
+                h3
+                {
+                    font-size: 15px;
+                }
+
             }
-            #containerClothing, #containerAccessories
+
+            @media(max-width: 900px)
             {
-                width: 80%;
-                grid-template-columns: repeat(2, 1fr);
+                /* #containerProduct */
+                #containerD
+                {
+                    width: 60%;
+                    margin: auto;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                }
+                #imageSection
+                {
+                    width: 100%;
+                    text-align: center;
+                }
+                #imageSection img
+                {
+                    text-align: center;
+                    width: 70%;
+                    float: none;
+                }
+                #productDetails
+                {
+                    width: 100%;
+                }
+                #button
+                {
+                    text-align: center;
+                }
             }
-        }
+
+            @media(max-width: 650px)
+            {
+                #containerD
+                {
+                    width: 80%;
+                }
+            }
       </style>
       
       <!--Style css  -->
@@ -296,7 +352,7 @@
           }
 
           body {
-            background: #edebeb;
+/*            background: ;*/
             font-size: 1.6rem;
             padding-block-start: 90px;
           }
@@ -458,82 +514,7 @@
            * #HERO
           \*-----------------------------------*/
 
-          .hero {
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: left;
-            min-height: 500px;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-          }
-          .hero-container{
-            margin: 0 8%;
-          }
-          .hero-title{
-            margin: 0 60% 0 0;
-          }
-          .hero-heading{
-            font-size: 2.2rem;
-            color: var(--text-color);
-          }
-          .hero-main-title{
-            font-size: 4rem;
-            margin-top: 2rem;
-          }
-          .hero-sub-heading{
-            font-size: 1.5rem;
-            margin-right: 10rem;
-          }
-          .action-btn{
-             background-color: var(--main-color);
-             padding: 2rem 4rem;
-             border-radius: 5rem;
-             margin-top: 2rem;
-             text-align: center;
-             width: 16rem;
-             color: #fff;
-          }
-          /*-----------------------------------*\
-           * #End HERO
-          \*-----------------------------------*/
-
-          /*-----------------------------------*\
-           * #Icons Section
-          \*-----------------------------------*/
-           .icons{
-            margin: 2% 6%;
-           }
-           .icons-container{
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            justify-items: center;
-           }
-           .icons-items{
-            display: flex;
-            flex-direction: row;
-            gap: 0.4rem;
-            align-items: center;
-            background-color: #dcdcdc;
-            width: 270px;
-            border-radius: 1rem;
-            padding: 2rem;
-           }
-           .icons-icon{
-            background-color:#fff;
-            padding: 2rem;
-            border: 1px solid var(--bittersweet);
-            border-radius: 50%;
-           }
-          .icons-heading{
-            font-size: 2rem;
-            font-weight: bolder;
-            color:var(--main-text-color);
-          }
-          .icon-sub-heading{
-            font-size: 1.2rem;
-            color: var(--text-color);
-          }
+          
 
           /*-----------------------------------*\
            * #End Icons Section
@@ -543,241 +524,11 @@
            * #Deal Section
           \*-----------------------------------*/
 
-          .deal{
-            margin: 2% 6%;
-          }
-          .deal-container{
-            background-color: #fff;
-            border-radius: 2rem;
-          }
-          .deal-heading{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 1rem;
-
-          }
-          .deal-icon{
-            color: var(--main-color);
-            font-size: 4rem;
-            margin: 2rem;
-          }
-          .deal-main-title{
-            font-size: 2rem;
-            font-weight: bolder;
-          }
-          .deal-item{
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-          }
-          .deal-items-list{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            background-color: #d9d9d9;
-            margin: 2rem;
-            border-radius: 1rem;
-
-          }
-          .deal-name{
-            font-size: 2rem;
-            font-weight: bolder;
-            margin-left: 2rem;
-          }
-          .deal-price{
-            color: var(--main-color);
-            font-size: 2rem;
-            margin-top: 2rem;
-            margin-left: 2rem;
-          }
-          .deal-btn{
-            background-color: var(--main-color);
-             padding: 1rem 2rem;
-             border-radius: 5rem;
-             margin-top: 2rem;
-             display: flex;
-             text-align: center;
-             align-items: center;
-             width: 12rem;
-             margin-left: 2rem;
-             color: #fff;
-          }
-          .deal-image{
-            height: 240px;
-          }
-          .left-right-icon{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            padding: 1rem;
-            gap: 1rem;
-            justify-content: center;
-          }
-          .deal-left-icon{
-            background-color: var(--main-color);
-            padding: 1rem;
-            border-radius: 0.5rem;
-            color: #fff;
-          }
-          .deal-right-icon{
-            background-color: var(--main-color);
-            padding: 1rem;
-            border-radius: 0.5rem;
-            color: #fff;
-          }
+          
           /* End Deal Section */
 
           /* Hot Deal Section */
-          .hot-deal{
-            margin: 2% 6%;
-          }
-          .hot-deal-headings{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-
-          }
-          .hot-deal-main-title{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-          }
-          .hot-deal-icon{
-            color: var(--main-color);
-            font-size: 4rem;
-            margin: 2rem;
-          }
-          .hot-deal-main-title{
-            font-size: 2rem;
-            font-weight: bolder;
-          }
-          .hot-deal-btn{
-             background-color: var(--main-color);
-             padding: 1rem 2rem;
-             border-radius: 2rem;
-             margin-top: 2rem;
-             display: flex;
-             margin-right: 2rem;
-             text-align: center;
-             align-items: center;
-             color: #fff;
-          }
-          .hot-deal-items{
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            justify-items: center;
-          }
-          .hot-deal-items-list{
-            background-color: #fff;
-            width: 290px;
-            border-radius: 1rem;
-            margin-top: 1rem;
-          }
-          .hot-deal-list-image{
-            display: flex;
-            justify-content: center;
-            position: relative;
-          }
-          .hot-deal-img{
-            height: 180px;
-          }
-          .deal-tag{
-            background-color: var(--bittersweet);
-            padding: 0.4rem 1rem;
-            font-size: 1.1rem;
-            border-radius: 2rem;
-            width: 4rem;
-            margin-top: 1rem;
-            margin-left: 2%;
-            color: white;
-          }
-          .deal-tag-sale{
-            background-color: black;
-            padding: 0.4rem 1rem;
-            font-size: 1.1rem;
-            border-radius: 2rem;
-            width: 4rem;
-            margin-top: 1rem;
-            margin-left: 2%;
-            color: white;
-          }
-          .hot-deal-icons{
-            position: absolute;
-            display: none;
-            margin-left: 79%;
-            margin-top: 7%;
-          }
-          .hot-deal-list-image:hover > .hot-deal-icons {
-            display: block;
-          }
-          .hot-deal-icons i{
-            background-color:var(--main-color);
-            padding: 1rem;
-            margin-top: 1rem;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            border-radius: 0.7rem;
-          }
-          .hot-deal-item-name a{
-            font-size: 2rem;
-            font-weight: bolder;
-            text-align: center;
-            color: var(--main-text-color);
-          }
-          .hot-deal-item-type a{
-            font-size: 1.3rem;
-            text-align: center;
-            margin-top: 0.4rem;
-            color: var(--text-color);
-
-          }
-          .hot-deal-footer{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin: 1rem 1.0rem;
-            align-items: center;
-          }
-          .hot-deal-list-price{
-            display: flex;
-            flex-direction: column;
-            gap:1rem;
-          }
-          .hot-deal-active-price{
-            font-size: 2rem;
-            color: var(--main-color);
-          }
-          .hot-deal-del-price{
-            font-size: 1.5rem;
-            color: red;
-          }
-          .hot-deal-cart{
-            background-color: var(--main-color);
-             padding: 1rem 1.5rem;
-             border-radius: 2rem;
-             margin-top: 2rem;
-             text-align: center;
-             color: #fff;
-          }
-          .load-more{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-          }
-          .hot-deal-more-btn{
-            background-color: var(--bittersweet);
-            padding: 1rem 2rem;
-            border-radius: 2rem;
-            margin-top: 2rem;
-            display: flex;
-            justify-content: flex-end;
-            margin-right: 2rem;
-            text-align: center;
-            align-items: center;
-            color: #fff;
-          }
+          
           /*-----------------------------------*\
            * #End Hot Deals Section
           \*-----------------------------------*/
@@ -785,60 +536,7 @@
           /*-----------------------------------*\
            * #Category Section
           \*-----------------------------------*/
-           .category{
-            margin: 2% 6%;
-           }
-           .category-list{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap:1rem;
-           }
-           .category-list-item {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDabOo0s19deOkILFUlxEeNN7SfGe9naDqjJhh41vKRm5cyw7FLGpaXAjhk7CSXvM5daQ&usqp=CAU);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            border-radius: 2rem;
-            display: inline-block;
-          }
-          .category-list-item:last-child {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://www.shutterstock.com/image-photo/shopping-sunglasses-black-woman-bags-600nw-2362528671.jpg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            border-radius: 2rem;
-            display: inline-block;
-          }
-
-           .category-headings{
-            display: flex;
-            position: relative;
-            flex-direction: column;
-            align-items: flex-end;
-            margin: 4rem;
-           }
-           .heading{
-             margin-left: 20rem;
-           }
-           .category-title{
-             color: #fff;
-             font-size: 2.5rem;
-             font-weight: bolder;
-           }
-           .category-title-heading{
-            color: var(--main-text-color);
-            font-size: 2rem;
-            font-weight: bolder;
-            margin-top: 2rem;
-           }
-           .category-btn{
-            color: #fff;
-            padding: 2rem 0rem;
-            text-decoration: underline;
-           }
-           .category-btn:hover{
-            text-decoration: none;
-           }
+           
           /*-----------------------------------*\
            * #End Category Section
           \*-----------------------------------*/
@@ -846,92 +544,7 @@
           /*-----------------------------------*\
            * #Product Section
           \*-----------------------------------*/
-          .product{
-            margin: 2% 6%;
-          }
-          .product-heading{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-          }
-          .product-heading-icon{
-            display: flex;
-            align-items: center;
-          }
-          .all-product-icon{
-            color: var(--main-color);
-            font-size: 3rem;
-            margin: 2rem;
-          }
-          .product-title{
-            font-size: 2rem;
-            font-weight: bolder;
-          }
-          .all-product-btn{
-            background-color: var(--main-color);
-            padding: 1rem 2rem;
-            border-radius: 5rem;
-            display: flex;
-            text-align: center;
-            align-items: center;
-            margin: 0 3rem 0 0;
-            color: #fff;
-          }
-          .product-item{
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            justify-items: center;
-          }
-          .product-list-title{
-            font-size: 1.4rem;
-            text-align: center;
-            font-weight: 400;
-            margin-top: 1rem;
-          }
-          .product-item-list{
-            display: flex;
-            flex-direction: row;
-            margin: 0.7rem;
-            background-color: #fff;
-            border-radius: 1rem;
-            width: 350px;
-            align-items: center;
-          }
-          .product-img{
-            background-color: #dcdcdc;
-            margin: 2rem;
-          }
-          .product-list-img{
-            height: 100px;
-          }
-          .product-info{
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-          }
-          .product-name{
-            font-weight: 500;
-            font-size: 2rem;
-          }
-          .product-price{
-            font-size: 2rem;
-            font-weight: 400;
-            color: var(--main-color);
-          }
-          .product-foot{
-            display: flex;
-            flex-direction: row;
-            gap: 1rem;
-          }
-          .product-cart{
-            background-color: var(--main-color);
-             padding: 1rem 1rem;
-             border-radius: 2rem;
-             text-align: center;
-             color: #fff;
-          }
+          
           /*-----------------------------------*\
            * #End Product Section
           \*-----------------------------------*/
@@ -1545,19 +1158,10 @@
       
       
      <!-- CONTENT SECTION -->
-       <div id="3"></div>
-        <div id="mainContainer">
-
-        <h1> clothing for men and women </h1>
-        <div id="containerClothing">
+        <div id="containerProduct">
             <!-- JS rendered code -->
         </div>
-
-        <h1> accessories for men and women </h1>
-        <div id="containerAccessories">
-            <!-- JS rendered code -->
-        </div>
-        </div>
+        
       
       
   
@@ -1711,96 +1315,158 @@
       <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
       
       <script>
-          let contentTitle;
+        console.clear()
 
-//            console.log(document.cookie);
-            function dynamicClothingSection(ob) {
-              let boxDiv = document.createElement("div");
-              boxDiv.id = "box";
+//        let id = location.search.split('?')[1]
+        let id = new URLSearchParams(location.search).get("id")
 
-              let boxLink = document.createElement("a");
-              // boxLink.href = '#'
-              boxLink.href = "pages/client/productDetails.jsp?id=" + ob.id;
-              // console.log('link=>' + boxLink);
+        console.log(id)
 
-              let imgTag = document.createElement("img");
-              // imgTag.id = 'image1'
-              // imgTag.id = ob.photos
-              imgTag.src = ob.preview;
+        if(document.cookie.indexOf(',counter=')>=0)
+        {
+            let counter = document.cookie.split(',')[1].split('=')[1]
+            document.getElementById("badge").innerHTML = counter
+        }
 
-              let detailsDiv = document.createElement("div");
-              detailsDiv.id = "details";
+        function dynamicContentDetails(ob)
+        {
+            let mainContainer = document.createElement('div')
+            mainContainer.id = 'containerD'
+            document.getElementById('containerProduct').appendChild(mainContainer);
 
-              let h3 = document.createElement("h3");
-              let h3Text = document.createTextNode(ob.name);
-              h3.appendChild(h3Text);
+            let imageSectionDiv = document.createElement('div')
+            imageSectionDiv.id = 'imageSection'
 
-              let h4 = document.createElement("h4");
-              let h4Text = document.createTextNode(ob.brand);
-              h4.appendChild(h4Text);
+            let imgTag = document.createElement('img')
+             imgTag.id = 'imgDetails'
+             //imgTag.id = ob.photos
+             imgTag.src = ob.preview
 
-              let h2 = document.createElement("h2");
-              let h2Text = document.createTextNode("rs  " + ob.price);
-              h2.appendChild(h2Text);
+            imageSectionDiv.appendChild(imgTag)
 
-              boxDiv.appendChild(boxLink);
-              boxLink.appendChild(imgTag);
-              boxLink.appendChild(detailsDiv);
-              detailsDiv.appendChild(h3);
-              detailsDiv.appendChild(h4);
-              detailsDiv.appendChild(h2);
+            let productDetailsDiv = document.createElement('div')
+            productDetailsDiv.id = 'productDetails'
 
-              return boxDiv;
+            // console.log(productDetailsDiv);
+
+            let h1 = document.createElement('h1')
+            let h1Text = document.createTextNode(ob.name)
+            h1.appendChild(h1Text)
+
+            let h4 = document.createElement('h4')
+            let h4Text = document.createTextNode(ob.brand)
+            h4.appendChild(h4Text)
+            console.log(h4);
+
+            let detailsDiv = document.createElement('div')
+            detailsDiv.id = 'details'
+
+            let h3DetailsDiv = document.createElement('h3')
+            let h3DetailsText = document.createTextNode('Rs ' + ob.price)
+            h3DetailsDiv.appendChild(h3DetailsText)
+
+            let h3 = document.createElement('h3')
+            let h3Text = document.createTextNode('Description')
+            h3.appendChild(h3Text)
+
+            let para = document.createElement('p')
+            let paraText = document.createTextNode(ob.description)
+            para.appendChild(paraText)
+
+            let productPreviewDiv = document.createElement('div')
+            productPreviewDiv.id = 'productPreview'
+
+            let h3ProductPreviewDiv = document.createElement('h3')
+            let h3ProductPreviewText = document.createTextNode('Product Preview')
+            h3ProductPreviewDiv.appendChild(h3ProductPreviewText)
+            productPreviewDiv.appendChild(h3ProductPreviewDiv)
+
+            let i;
+            for(i=0; i<ob.photos.length; i++)
+            {
+                let imgTagProductPreviewDiv = document.createElement('img')
+                imgTagProductPreviewDiv.id = 'previewImg'
+                imgTagProductPreviewDiv.src = ob.photos[i]
+                imgTagProductPreviewDiv.onclick = function(event)
+                {
+                    console.log("clicked" + this.src)
+                    imgTag.src = ob.photos[i]
+                    document.getElementById("imgDetails").src = this.src 
+
+                }
+                productPreviewDiv.appendChild(imgTagProductPreviewDiv)
             }
 
-            //  TO SHOW THE RENDERED CODE IN CONSOLE
-            // console.log(dynamicClothingSection());
+            let buttonDiv = document.createElement('div')
+            buttonDiv.id = 'button'
 
-            // console.log(boxDiv)
+            let buttonTag = document.createElement('button')
+            buttonDiv.appendChild(buttonTag)
 
-            let mainContainer = document.getElementById("mainContainer");
-            let containerClothing = document.getElementById("containerClothing");
-            let containerAccessories = document.getElementById("containerAccessories");
-            // mainContainer.appendChild(dynamicClothingSection('hello world!!'))
-
-            // BACKEND CALLING
-
-            let httpRequest = new XMLHttpRequest();
-
-            httpRequest.onreadystatechange = function() {
-              if (this.readyState === 4) {
-                if (this.status == 200) {
-                  // console.log('call successful');
-                  contentTitle = JSON.parse(this.responseText);
-                  if (document.cookie.indexOf(",counter=") >= 0) {
-                    var counter = document.cookie.split(",")[1].split("=")[1];
-                    document.getElementById("badge").innerHTML = counter;
-                  }
-                  for (let i = 0; i < contentTitle.length; i++) {
-                    if (contentTitle[i].isAccessory) {
-                      console.log(contentTitle[i]);
-                      containerAccessories.appendChild(
-                        dynamicClothingSection(contentTitle[i])
-                      );
-                    } else {
-                      console.log(contentTitle[i]);
-                      containerClothing.appendChild(
-                        dynamicClothingSection(contentTitle[i])
-                      );
-                    }
-                  }
-                } else {
-                  console.log("call failed!");
+            buttonText = document.createTextNode('Add to Cart')
+            buttonTag.onclick  =   function()
+            {s
+                let order = id+" "
+                let counter = 1
+                if(document.cookie.indexOf(',counter=')>=0)
+                {
+                    order = id + " " + document.cookie.split(',')[0].split('=')[1]
+                    counter = Number(document.cookie.split(',')[1].split('=')[1]) + 1
                 }
-              }
-            };
-            httpRequest.open(
-              "GET",
-              "https://5d76bf96515d1a0014085cf9.mockapi.io/product",
-              true
-            );
-            httpRequest.send();
+                document.cookie = "orderId=" + order + ",counter=" + counter
+                document.getElementById("badge").innerHTML = counter
+                console.log(document.cookie)
+            }
+            buttonTag.appendChild(buttonText)
+
+
+            console.log(mainContainer.appendChild(imageSectionDiv));
+            mainContainer.appendChild(imageSectionDiv)
+            mainContainer.appendChild(productDetailsDiv)
+            productDetailsDiv.appendChild(h1)
+            productDetailsDiv.appendChild(h4)
+            productDetailsDiv.appendChild(detailsDiv)
+            detailsDiv.appendChild(h3DetailsDiv)
+            detailsDiv.appendChild(h3)
+            detailsDiv.appendChild(para)
+            productDetailsDiv.appendChild(productPreviewDiv)
+
+
+            productDetailsDiv.appendChild(buttonDiv)
+
+
+            return mainContainer
+        }
+
+
+
+        // BACKEND CALLING
+
+        let httpRequest = new XMLHttpRequest()
+        
+        httpRequest.onreadystatechange = function()
+            {
+                if(this.readyState === 4 && this.status == 200)
+                {
+                    console.log('connected!!');
+                    let contentDetails = JSON.parse(this.responseText)
+                    {
+                        console.log(contentDetails);
+                        dynamicContentDetails(contentDetails)
+                    }
+                }
+                else
+                {
+                    console.log('not connected!');
+                }
+            }
+        
+
+        httpRequest.open('GET', 'https://5d76bf96515d1a0014085cf9.mockapi.io/product/'+id, true)
+        httpRequest.send()  
       </script>
+      
+      
     </body>
 
     </html>
