@@ -41,121 +41,52 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
       
-      <!--cart css  -->
+      <!--Content css  -->
       
       <style>
-          body
+          
+            #orderContainer
             {
-                margin: 0;
                 font-family: 'Lato', sans-serif;
-            }
-            #cartMainContainer
-            {
-                padding: 90px 50px;
-            }
-            #cartContainer
-            {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-gap: 20px;
-            }
-            img
-            {
-                width: 80px;
-                float: left;
-                border-radius: 10px;
-                margin-right: 50px;
-            }
-            #boxContainer
-            {
-                display: grid;
-                grid-gap: 20px;
-                padding: 20px;
-                width: 100%;
-                /* float: left; */
-            }
-            #box
-            {
-                background-color: white;
-                box-shadow: 1px 2px 6px 2px rgb(219, 219, 219);
-                border-radius: 10px;
-                width: 100%;
-                /* margin: auto */
-                padding: 20px 10px;
-            }
-            #box:hover
-            {
-                box-shadow: 0px 1px 3px 2px rgb(185, 185, 185);
-            }
-            #totalContainer
-            {
-                width: 50%;
-                padding: 20px;
+                width: 80%;
+                padding-top: 250px;
+                padding-bottom: 150px;
                 margin: auto;
-                background-color: white;
-                border-radius: 10px;
-                box-shadow: 1px 2px 6px 2px rgb(219, 219, 219);
+                text-align: center;
             }
-            #totalContainer:hover
+            #orderContainer i
             {
-                box-shadow: 0px 1px 3px 2px rgb(185, 185, 185);
+                color: rgb(5, 187, 5);
+                padding-bottom: 30px;
+                font-size: 10em;
             }
-            button
+            #aboutCheck p
             {
-                padding: 8px 12px;
-                background-color: rgb(3, 122, 122);
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
+                font-weight: 100;
+                letter-spacing: 1px;
             }
-            button a
+            #aboutCheck h1
             {
-                text-decoration: none;
-                color: white;
-                font-size: 15px;
-            }
-            button:hover
-            {
-                background-color: rgb(3, 94, 94);
-            }
-            button a:focus
-            {
-                outline: none;
+                letter-spacing: 1px;
+                word-spacing: 1px;
             }
 
             /* ----------------------------- MEDIA QUERY --------------------------- */
 
-            @media(max-width: 800px)
+            @media(max-width: 700px)
             {
-                img
+                #orderContainer i
                 {
-                    width: 60px;
-                    margin-right: 20px;
+                    font-size: 8em;
+                    padding-bottom: 30px;
                 }
-                h3, h4
-                {
-                    font-size: 14px;
-                }
-                h2
+                h1
                 {
                     font-size: 18px;
                 }
-                #cartMainContainer
+                p
                 {
-                    padding: 90px 20px;
-                }
-            }
-            @media(max-width: 555px)
-            {
-                #cartContainer
-                {
-                    display: grid;
-                    grid-template-columns: 1fr;
-                }    
-                #boxContainer
-                {
-                    padding: 20px;
-                    width: 80%;
+                    font-size: 15px;
                 }
             }
       </style>
@@ -1449,8 +1380,9 @@
 
             <ul class="navbar-list">
 
+
               <li class="navbar-item">
-                <a href="/MyEcommerceApp/pages/visitor/welcome.jsp" class="navbar-link">Home</a>
+                <a href="pages/visitor/welcome.jsp" class="navbar-link">Home</a>
               </li>
 
               <li class="navbar-item">
@@ -1458,7 +1390,7 @@
               </li>
 
               <li class="navbar-item">
-                <a href="/MyEcommerceApp/pages/client/home.jsp" class="navbar-link">Products</a>
+                <a href="pages/client/home.jsp" class="navbar-link">Products</a>
               </li>
 
               <li class="navbar-item">
@@ -1504,7 +1436,7 @@
               </li>
 
               <li>
-                <button class="nav-action-btn">
+                <button class="nav-action-btn" onclick="window.location.href='pages/client/cart.jsp'">
                   <ion-icon name="bag-outline" aria-hidden="true"></ion-icon>
 
                   <data class="nav-action-text" value="318.00">Basket: <strong>$318.00</strong></data>
@@ -1523,16 +1455,20 @@
       
       
      <!-- CONTENT SECTION -->
-        <div id="cartMainContainer">
-            <h1> Checkout </h1>
-            <h3 id="totalItem"> Total Items: 0 </h3>
-
-            <div id="cartContainer">
-            <!-- JS rendered code -->
-            </div>
-
+       <div id="3"></div>
+        <div id="check"><i class="fas fa-check-circle"></i></div>
+        
+        <div id="aboutCheck">
+            <h1> Order Placed Successfully! </h1>
+            <p> We've sent you an email with the Order details. </p>
+        </div>
         </div>
 
+        <h1> accessories for men and women </h1>
+        <div id="containerAccessories">
+            <!-- JS rendered code -->
+        </div>
+        </div>
       
       
   
@@ -1686,145 +1622,33 @@
       <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
       
       <script>
-          console.clear();
+          document.cookie = "orderId="+0 +",counter="+0
 
-            if(document.cookie.indexOf(',counter=')>=0)
-            {
-                let counter = document.cookie.split(',')[1].split('=')[1]
-                document.getElementById("badge").innerHTML = counter
-            }
+            let httpRequest = new XMLHttpRequest(),
+            jsonArray,
+            method = "GET",
+            jsonRequestURL = "https://5d76bf96515d1a0014085cf9.mockapi.io/order";
 
-
-            let cartContainer = document.getElementById('cartContainer')
-
-            let boxContainerDiv = document.createElement('div')
-            boxContainerDiv.id = 'boxContainer'
-
-            // DYNAMIC CODE TO SHOW THE SELECTED ITEMS IN YOUR CART
-            function dynamicCartSection(ob,itemCounter)
-            {
-                let boxDiv = document.createElement('div')
-                boxDiv.id = 'box'
-                boxContainerDiv.appendChild(boxDiv)
-
-                let boxImg = document.createElement('img')
-                boxImg.src = ob.preview
-                boxDiv.appendChild(boxImg)
-
-                let boxh3 = document.createElement('h3')
-                let h3Text = document.createTextNode(ob.name + ' × ' + itemCounter)
-                // let h3Text = document.createTextNode(ob.name)
-                boxh3.appendChild(h3Text)
-                boxDiv.appendChild(boxh3)
-
-                let boxh4 = document.createElement('h4')
-                let h4Text = document.createTextNode('Amount: Rs' + ob.price)
-                boxh4.appendChild(h4Text)
-                boxDiv.appendChild(boxh4)
-
-                // console.log(boxContainerDiv);
-
-                buttonLink.appendChild(buttonText)
-                cartContainer.appendChild(boxContainerDiv)
-                cartContainer.appendChild(totalContainerDiv)
-                // let cartMain = document.createElement('div')
-                // cartmain.id = 'cartMainContainer'
-                // cartMain.appendChild(totalContainerDiv)
-
-                return cartContainer
-            }
-
-            let totalContainerDiv = document.createElement('div')
-            totalContainerDiv.id = 'totalContainer'
-
-            let totalDiv = document.createElement('div')
-            totalDiv.id = 'total'
-            totalContainerDiv.appendChild(totalDiv)
-
-            let totalh2 = document.createElement('h2')
-            let h2Text = document.createTextNode('Total Amount')
-            totalh2.appendChild(h2Text)
-            totalDiv.appendChild(totalh2)
-
-            // TO UPDATE THE TOTAL AMOUNT
-            function amountUpdate(amount)
-            {
-                let totalh4 = document.createElement('h4')
-                // let totalh4Text = document.createTextNode(amount)
-                let totalh4Text = document.createTextNode('Amount: Rs ' + amount)
-                totalh4Text.id = 'toth4'
-                totalh4.appendChild(totalh4Text)
-                totalDiv.appendChild(totalh4)
-                totalDiv.appendChild(buttonDiv)
-                console.log(totalh4);
-            }
-
-
-            let buttonDiv = document.createElement('div')
-            buttonDiv.id = 'button'
-            totalDiv.appendChild(buttonDiv)
-
-            let buttonTag = document.createElement('button')
-            buttonDiv.appendChild(buttonTag)
-
-            let buttonLink = document.createElement('a')
-            buttonLink.href = '/MyEcommerceApp/pages/client/orderPlaced.html?'
-            buttonTag.appendChild(buttonLink)
-
-            buttonText = document.createTextNode('Place Order')
-            buttonTag.onclick = function()
-            {
-                console.log("clicked")
-            }  
-            //dynamicCartSection()
-            // console.log(dynamicCartSection());
-
-            // BACKEND CALL
-            let httpRequest = new XMLHttpRequest()
-            let totalAmount = 0
+            httpRequest.open(method, jsonRequestURL, true);
             httpRequest.onreadystatechange = function()
             {
-                if(this.readyState === 4)
+                if(httpRequest.readyState == 4 && httpRequest.status == 200)
                 {
-                    if(this.status == 200)
-                    {
-                        // console.log('call successful');
-                        contentTitle = JSON.parse(this.responseText)
-
-                        let counter = Number(document.cookie.split(',')[1].split('=')[1])
-                        document.getElementById("totalItem").innerHTML = ('Total Items: ' + counter)
-
-                        let item = document.cookie.split(',')[0].split('=')[1].split(" ")
-                        console.log(counter)
-                        console.log(item)
-
-                        let i;
-                        let totalAmount = 0
-                        for(i=0; i<counter; i++)
+                    // convert JSON into JavaScript object
+                    jsonArray = JSON.parse(httpRequest.responseText)
+                    console.log(jsonArray)    
+                    jsonArray.push(
                         {
-                            let itemCounter = 1
-                            for(let j = i+1; j<counter; j++)
-                            {   
-                                if(Number(item[j]) == Number(item[i]))
-                                {
-                                    itemCounter +=1;
-                                }
-                            }
-                            totalAmount += Number(contentTitle[item[i]-1].price) * itemCounter
-                            dynamicCartSection(contentTitle[item[i]-1],itemCounter)
-                            i += (itemCounter-1)
-                        }
-                        amountUpdate(totalAmount)
-                    }
-                }
-                    else
-                    {
-                        console.log('call failed!');
-                    }
-            }
+                            "id": (jsonArray.length)+1, "amount": 200,"product":["userOrder"]
+                        })
 
-            httpRequest.open('GET', 'https://5d76bf96515d1a0014085cf9.mockapi.io/product', true)
-            httpRequest.send()
+                    // send with new request the updated JSON file to the server:
+                    httpRequest.open("POST", jsonRequestURL, true)
+                    httpRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+                    httpRequest.send(jsonArray)
+                }
+            }
+            httpRequest.send(null);
       </script>
     </body>
 
