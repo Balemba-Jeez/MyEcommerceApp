@@ -1078,7 +1078,7 @@
               <ion-icon name="close-outline"></ion-icon>
             </button>
 
-            <a href="#" class="logo">
+            <a href="/MyEcommerceApp/pages/visitor/welcome.jsp" class="logo">
               <img src="./assets/images/logo1.svg" width="190" height="50" alt="logo">
             </a>
 
@@ -1097,13 +1097,13 @@
                 <a href="/MyEcommerceApp/pages/client/home.jsp" class="navbar-link">Products</a>
               </li>
 
-              <li class="navbar-item">
+<!--              <li class="navbar-item">
                 <a href="#" class="navbar-link">Shop</a>
               </li>
 
               <li class="navbar-item">
                 <a href="#" class="navbar-link">Blog</a>
-              </li>
+              </li>-->
 
               <li class="navbar-item">
                 <a href="#" class="navbar-link">Contact</a>
@@ -1121,13 +1121,13 @@
                 </button>
               </li>
 
-              <li>
+<!--              <li>
                 <a href="/MyEcommerceApp/pages/visitor/register.jsp" class="nav-action-btn">
                   <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
 
                   <span class="nav-action-text">Login / Register</span>
                 </a>
-              </li>
+              </li>-->
 
               <li>
                 <button class="nav-action-btn">
@@ -1176,11 +1176,11 @@
                 <span class="footer-title">Company</span>
               </div>
               <div class="footer-menu-items">
-                <p class="footer-sub-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Libero illum ducimus magnam deleniti earum
-                  dolorum minus commodi facere quasi, officia modi
-                  quis minima quisquam optio ipsam molestiae
-                  blanditiis consequatur et.</p>
+                <p class="footer-sub-description">Shopping is your trusted online marketplace,
+bringing you quality products at unbeatable prices.
+From everyday essentials to special finds,
+we make shopping simple, fast, and enjoyable —
+always putting your satisfaction first.</p>
               </div>
             </div>
 
@@ -1192,9 +1192,9 @@
               <div class="footer-menu-items">
                 <a href="#">Home</a>
                 <a href="#">About</a>
-                <a href="#">Category</a>
+                <!--<a href="#">Category</a>-->
                 <a href="#">Product</a>
-                <a href="#">Shop</a>
+                <!--<a href="#">Shop</a>-->
 
               </div>
             </div>

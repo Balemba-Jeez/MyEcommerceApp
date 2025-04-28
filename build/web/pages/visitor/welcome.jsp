@@ -1306,7 +1306,7 @@
 
           <div class="overlay" data-overlay></div>
 
-          <a href="#" class="logo">
+          <a href="/MyEcommerceApp/pages/visitor/welcome.jsp" class="logo">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqV4f9VziETf4yc-lCiftKbDtM8HLAm30kdA&s" width="160" height="70" alt="logo">
           </a>
 
@@ -1327,24 +1327,24 @@
             <ul class="navbar-list">
 
               <li class="navbar-item">
-                <a href="#" class="navbar-link">Home</a>
+                <a href="/MyEcommerceApp/pages/visitor/welcome.jsp" class="navbar-link">Home</a>
               </li>
 
               <li class="navbar-item">
                 <a href="#" class="navbar-link">About</a>
               </li>
 
-              <li class="navbar-item">
+<!--              <li class="navbar-item">
                 <a href="#" class="navbar-link">Products</a>
-              </li>
+              </li>-->
 
-              <li class="navbar-item">
+<!--              <li class="navbar-item">
                 <a href="#" class="navbar-link">Shop</a>
               </li>
 
               <li class="navbar-item">
                 <a href="#" class="navbar-link">Blog</a>
-              </li>
+              </li>-->
 
               <li class="navbar-item">
                 <a href="#" class="navbar-link">Contact</a>
@@ -1363,7 +1363,7 @@
               </li>
 
               <li>
-                <a href="pages/visitor/register.jsp" class="nav-action-btn">
+                <a href="/MyEcommerceApp/pages/visitor/register.jsp" class="nav-action-btn">
                   <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
 
                   <span class="nav-action-text">Login / Register</span>
@@ -1465,9 +1465,9 @@
               <div class="footer-menu-items">
                 <a href="#">Home</a>
                 <a href="#">About</a>
-                <a href="#">Category</a>
+<!--                <a href="#">Category</a>-->
                 <a href="#">Product</a>
-                <a href="#">Shop</a>
+                <!--<a href="#">Shop</a>-->
 
               </div>
             </div>
